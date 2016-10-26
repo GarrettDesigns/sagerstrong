@@ -1,0 +1,94 @@
+
+	form.donation_form input[type=radio]{
+		display: none;
+	}
+
+	form.donation_form .options{
+    padding: 0px;
+    margin: 0px;
+    @include button-group();
+    @include button-group-unstack();
+    @include button-group-expand();
+    .button {
+      @include breakpoint(medium down) {
+        width: 100%!important;
+        display: block!important;
+        margin-bottom: rem-calc(15);
+      }
+    }
+  }
+
+  form.donation_form .hidden {
+    display: none!important;
+  }
+
+	form.donation_form .options li {
+		list-style-type: none;
+    cursor: pointer;
+	}
+
+	form.donation_form .options .button{
+		background-color: $light-gray;
+		border-radius: 3px;
+		text-align: center;
+		cursor: pointer;
+    label {
+  		color: $dark-gray;
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: map-get($foundation-palette, primary);
+      label {
+        color: white;
+      }
+    }
+	}
+
+	form.donation_form .options .on {
+		background-color: map-get($foundation-palette, primary);
+    label {
+      color: white;
+    }
+	}
+
+	form.donation_form label.recur{
+    display: block;
+    line-height: 1.5;
+    padding: rem-calc(10) 0;
+    input[type=checkbox] {
+      float: left;
+      margin-top: rem-calc(5);
+    }
+  }
+
+	form.donation_form input[type=submit] {
+    background: map-get($foundation-palette, primary);
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: rem-calc(10);
+    width: 50%;
+    margin: rem-calc(20) auto 0;
+    display: block;
+    text-transform: uppercase;
+    border-radius: rem-calc(3);
+    &:hover {
+      background: darken(map-get($foundation-palette, primary), 5%);
+    }
+  }
+	form.donation_form span.error{ color: red; display: none; }
+
+  .input_container {
+    display: none;
+    width: 100%;
+  }
+
+  .other_amount_input {
+    margin: rem-calc(20) 0;
+  }
+
+  .tabs-title {
+    width: 50%;
+    text-align: center;
+  }

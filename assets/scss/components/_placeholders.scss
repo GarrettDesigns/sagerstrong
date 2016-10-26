@@ -1,0 +1,6 @@
+%main_red_heading_defaults {
+  color: map-get($foundation-palette, primary);
+  text-transform: uppercase;
+  font-size: rem-calc(20);
+  letter-spacing: 1.5px;
+}

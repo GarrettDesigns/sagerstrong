@@ -1,0 +1,246 @@
+
+#page-full-width {
+	@include grid-row();
+	margin-top: 3rem;
+
+	.main-content {
+		@include breakpoint(small) {
+			@include grid-column(12);
+		}
+	}
+
+  // Homepage Content Styles
+  //-----------------------------------------------------------
+
+	.donation-info {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.page_header {
+		@include grid-row();
+	}
+
+	.donation-info {
+		font-size: 20px;
+		padding: 20px 0;
+    margin: 45px 0;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+	}
+
+  .main-navigation {
+    @include grid-column(8);
+    @include breakpoint(medium-large down) {
+      @include grid-column(12);
+    }
+  }
+
+	.desktop-menu {
+		float: right;
+    padding-top: 5px;
+    @include breakpoint(medium-large down) {
+      float: none;
+      margin: 0 auto;
+      margin-top: 40px;
+      width: 550px;
+    }
+	}
+
+	.site_logo_container {
+		@include grid-column(4);
+    @include breakpoint(medium-large down) {
+      @include grid-column(12);
+    }
+	}
+
+  .site_logo {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    @include breakpoint(large up) {
+      width: 300px;
+      margin: 0;
+    }
+  }
+
+  .orbit-container {
+    // Fixes issue with height when responsive. Do not Remove!
+    height: auto!important;
+  }
+
+	.tagline_container {
+		@include grid-row();
+  	margin-top: 5%;
+	}
+
+	.tagline {
+		text-transform: uppercase;
+		font-size: 20px;
+		@include grid-column(7);
+		@include grid-column-offset(3);
+	}
+
+	.signature {
+		@include grid-column(4);
+	}
+
+  .featured_tiles {
+    @include grid-row();
+  }
+
+  .featured_tile {
+    @include grid-column(3);
+    @include breakpoint(medium down) {
+      @include grid-column(6);
+    }
+    @include breakpoint(small down) {
+      @include grid-column(12);
+    }
+  }
+
+  .tile_heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: map-get($foundation-palette, primary);
+    margin-top: 20px;
+  }
+
+  .page_end_logo {
+    @include grid-column(2);
+    @include grid-column-offset(5);
+    @include grid-column-end;
+    padding: 100px 0;
+  }
+
+  // End Homepage Content Styles
+
+  // About Page Content Styles
+  //-----------------------------------------------------------
+
+  .about_page_container {
+    @include grid-row();
+  }
+
+  .page_column {
+    &--left {
+      @include grid-column(5);
+      @include grid-column-offset(1);
+      @include breakpoint(medium down) {
+        @include grid-column(12);
+        @include grid-column-offset(0);
+      }
+      &.donation_description {
+        @include breakpoint(custom down) {
+          @include grid-column(12);
+          @include grid-column-offset(0);
+          margin-bottom: rem-calc(30);
+        }
+      }
+    }
+    &--right {
+      @include grid-column(5);
+      @include grid-column-end;
+      @include breakpoint(medium down) {
+        @include grid-column(12);
+      }
+      &.donation_form {
+        @include breakpoint(custom down) {
+          @include grid-column(12);
+        }
+      }
+    }
+  }
+
+  .page_end_graphic {
+    @include grid-column(3);
+    @include grid-column-end;
+    padding: 100px 0;
+  }
+  // End About Page Styles
+
+  // Start Contact Page Styles
+  //-----------------------------------------------------------
+
+  .contact_page_content {
+    @include grid-row();
+  }
+
+  .contact_coat_graphic {
+    margin-bottom: rem-calc(20);
+  }
+
+  .contact_form_input {
+    border: none;
+    background: lighten($light-gray, 5%);
+    box-shadow: none;
+    margin-top: 5px;
+  }
+
+  .wpcf7-submit {
+    background: map-get($foundation-palette, primary);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    &:hover {
+      background: darken(map-get($foundation-palette, primary), 5%);
+    }
+  }
+  // End Contact Page Content Styles
+
+  // Start Partners Content Styles
+  //-----------------------------------------------------------
+
+  .partner {
+    margin-bottom: rem-calc(40);
+  }
+
+  .partner_name {
+    text-transform: uppercase;
+    color: map-get($foundation-palette, primary);
+    font-size: rem-calc(20);
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  .partner_link {
+    color: white;
+    background: map-get($foundation-palette, primary);
+    padding: rem-calc(10);
+    border-radius: 3px;
+    text-align: center;
+  }
+  // End Partners Content Styles
+
+  // Donation Page Styling
+  //-----------------------------------------------------------
+
+  .donation_heading {
+    @extend %main_red_heading_defaults;
+  }
+
+  .donation_form, .recurring_donation_form {
+    background: lighten($light-gray, 5%);
+    padding: rem-calc(20);
+    @include breakpoint(small down) {
+      margin-top: rem-calc(20);
+    }
+    &--heading {
+      @extend %main_red_heading_defaults;
+      @include breakpoint(small down) {
+        text-align: center;
+        margin-bottom: rem-calc(20);
+      }
+    }
+    .recur {
+      margin-top: rem-calc(10);
+    }
+  }
+
+}

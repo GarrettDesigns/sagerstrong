@@ -1,0 +1,39 @@
+
+body {
+  background: url('../images/tie_bg.png') center -40% no-repeat;
+}
+
+.red_uppercase_title {
+  text-transform: uppercase;
+  color: map-get($foundation-palette, primary);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1.25px;
+  display: block;
+}
+
+.red_excerpt_link {
+  color: map-get($foundation-palette, primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+.uppercase_accent_text {
+  text-transform: uppercase;
+  display: block;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .5px;
+  color: #212121;
+}
+
+.standard_paragraph {
+  color: #212121;
+  line-height: 1.5;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
